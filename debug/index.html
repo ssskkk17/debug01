@@ -7,7 +7,7 @@
     <body>
         <script>
             function toOneDimension(previousValue, currentValue) {
-                return previousValue.concat(currentValue);
+                return currentValue.concat(previousValue);
             }
             //配列sampleArrayAを作り、格納する。
             var sampleArrayA = [
@@ -19,13 +19,14 @@
             //配列sampleArrayBを作り、reduceメソッドを書く。
             var sampleArrayB = sampleArrayA.reduce(toOneDimension);
             
-            //counterVarを0と書き、キーを初期化させる。sampleArrayB.lengthは9こなので、0から8までループさせるfor文を書く。
+            console.log(sampleArrayB);
+            
+            //counterVarを0と書く。sampleArrayB.lengthは9こなので、0から8までループさせるfor文を書く。
             for (var counterVar = 0; counterVar < sampleArrayB.length; counterVar++) {
                 document.write('sampleArrayB['+counterVar+']:');
                 document.write(sampleArrayB[counterVar]);
                 document.write('<br/>');
             }
-            
         </script>
     </body>
 </html>
